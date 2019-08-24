@@ -50,9 +50,9 @@ class EventListener implements Listener {
 		//file_put_contents($this->plugin->getDataFolder() . "skin" . $ev->getPlayer()->getName() . ".txt", base64_encode(serialize($ev->getPlayer()->namedtag->Skin)));
 		if(!isset($this->plugin->warnings[$ev->getPlayer()->getName()])){
 			$this->plugin->warnings[$ev->getPlayer()->getName()] = 0;
-			$ev->getPlayer()->sendMessage(Main::getPrefix() . "I'm watching you...");
+		//	$ev->getPlayer()->sendMessage(Main::getPrefix() . "I'm wa");
 		} else {
-			$ev->getPlayer()->sendMessage(Main::getPrefix() . "I'm still watching you...");
+		//	$ev->getPlayer()->sendMessage(Main::getPrefix() . "I'm still watching you...");
 		}
 		$baitNBT = Entity::createBaseNBT($ev->getPlayer()->asVector3()); // unreachable at first
 		$bait = $this->plugin->baits[$ev->getPlayer()->getName()] = new AutoAimBait($ev->getPlayer()->getLevel(), $baitNBT, $ev->getPlayer());
