@@ -71,7 +71,7 @@ class Main extends PluginBase{
 		$pluginManager = $this->getServer()->getPluginManager();
 		$pluginManager->registerEvents(new EventListener($this), $this);
 		$pluginManager->registerEvents(new PacketHandler($this), $this);
-		$this->getServer()->getScheduler()->scheduleRepeatingTask(new AgentHeartbeat($this), 5);
+		$this->getScheduler()->scheduleRepeatingTask(new AgentHeartbeat($this), 5);
 
 		$this->modules[] = new AntiFly();
 		$this->modules[] = new AntiNoClip();
